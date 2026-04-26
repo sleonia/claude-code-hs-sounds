@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hearthstone Sound Pack</title>
+    <style>
+      :root {
+        --bg: #0f1425;
+        --panel: rgba(20, 29, 52, 0.88);
+        --panel-border: rgba(255, 212, 132, 0.18);
+        --text: #f8f0dc;
+        --muted: #cbbd9b;
+        --accent: #ffcb67;
+        --accent-strong: #f29a2e;
+        --focus: #8ed8ff;
+        --shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top, rgba(88, 122, 212, 0.2), transparent 36%),
+          linear-gradient(180deg, #1b2139 0%, #0f1425 45%, #090d18 100%);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .shell {
+        width: min(1120px, calc(100% - 2rem));
+        margin: 0 auto;
+        padding: 3rem 0 4rem;
+      }
+
+      .hero {
+        margin-bottom: 2rem;
+      }
+
+      .eyebrow {
+        margin: 0 0 0.6rem;
+        color: var(--accent);
+        font-size: 0.9rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        max-width: 12ch;
+        font-size: clamp(2.5rem, 5vw, 4.4rem);
+        line-height: 0.95;
+      }
+
+      .intro {
+        max-width: 62ch;
+        margin: 1rem 0 0;
+        color: var(--muted);
+        font-size: 1.05rem;
+        line-height: 1.6;
+      }
+
+      .status {
+        margin: 1.25rem 0 0;
+        min-height: 1.5rem;
+        color: var(--accent);
+        font-size: 0.95rem;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 1.2rem;
+      }
+
+      .card {
+        display: grid;
+        grid-template-rows: auto 1fr;
+        background: linear-gradient(180deg, rgba(30, 42, 76, 0.96), rgba(11, 17, 33, 0.96));
+        border: 1px solid var(--panel-border);
+        border-radius: 22px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+
+      .card:focus-within {
+        outline: 3px solid var(--focus);
+        outline-offset: 4px;
+      }
+
+      .art {
+        aspect-ratio: 375 / 518;
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .art img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .content {
+        display: grid;
+        gap: 0.9rem;
+        padding: 1rem;
+      }
+
+      .card-link {
+        display: grid;
+        gap: 0.9rem;
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .meta {
+        display: grid;
+        gap: 0.35rem;
+      }
+
+      .set {
+        color: var(--accent);
+        font-size: 0.8rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      .title {
+        margin: 0;
+        font-size: 1.25rem;
+        line-height: 1.15;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+        margin-top: auto;
+      }
+
+      .card-link:focus-visible {
+        outline: 3px solid var(--focus);
+        outline-offset: 2px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 2.8rem;
+        padding: 0.8rem 1rem;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        font: inherit;
+      }
+
+      .button {
+        flex: 1 1 auto;
+        cursor: pointer;
+        color: #1b1730;
+        background: linear-gradient(180deg, #ffd772 0%, #f0a43b 100%);
+      }
+
+      .button[data-state="playing"] {
+        background: linear-gradient(180deg, #9ad9ff 0%, #5bb6ff 100%);
+      }
+
+      .button:hover,
+      .card-link:hover .title {
+        color: var(--accent);
+      }
+
+      .card-link:hover .art img {
+        transform: translateY(-1px);
+      }
+
+      .button:focus-visible {
+        outline: 3px solid var(--focus);
+        outline-offset: 2px;
+      }
+
+      @media (max-width: 640px) {
+        .shell {
+          width: min(100% - 1rem, 34rem);
+          padding-top: 1.5rem;
+        }
+
+        .actions {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <p class="eyebrow">Static Sample</p>
+        <h1>Hearthstone Sound Pack</h1>
+        <p class="intro">
+          Five mapped cards pulled from the local <code>soundpack/</code> tree. Each tile uses a verified
+          Blizzard card image and page URL, while playback comes from the local <code>.wav</code> assets in
+          this repository.
+        </p>
+        <p class="status" id="status" aria-live="polite">Ready.</p>
+      </header>
+
+      <section class="grid" id="grid" aria-label="Mapped cards"></section>
+    </main>
+
+    <script>
+      const cards = [
+        {
+          title: "Бармен Боб",
+          set: "1 БОБ",
+          image:
+            "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/64b324cdecacd4751a76dd03b4c346ec8a1343a2fb145ac00ecc8bec276777f2.png",
+          source: "https://hearthstone.blizzard.com/ru-ru/cards/117723",
+          audios: [
+            {
+              label: "Play",
+              path: "soundpack/1 БОБ/VO_DALA_BOSS_99h_Male_Human_Behind_02.wav"
+            }
+          ]
+        },
+        {
+          title: "Бомбометатель",
+          set: "[2014.12.8] Гоблины и Гномы",
+          image:
+            "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/a2a9f96397aaf73bc0eb00548a0e8857e09b1645c4376668817f9f7fd09ac8e6.png",
+          source: "https://hearthstone.blizzard.com/ru-ru/cards/2067-bomb-lobber/",
+          audios: [
+            {
+              label: "Play",
+              path: "soundpack/[2014.12.8] Гоблины и Гномы/Бомбометатель/VO_GVG_099_Attack_02.wav"
+            }
+          ]
+        },
+        {
+          title: "Боец из Даларана",
+          set: "[2015.08.24] Большой турнир",
+          image:
+            "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/6c48c7e203082de95a3d37f6fb21c44a2c6d965a135a15111945cfdd9f87868b.png",
+          source: "https://hearthstone.blizzard.com/ru-ru/cards/2549",
+          audios: [
+            {
+              label: "Play",
+              path: "soundpack/[2015.08.24] Большой турнир/Боец из Даларана/VO_AT_006_TRIGGER_04.wav"
+            }
+          ]
+        },
+        {
+          title: "Серебряный дозорный",
+          set: "[2015.08.24] Большой турнир",
+          image:
+            "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/02cb33c2a6e6de6d286d966ee595bd9ae9a9c6de273a2ffb94f2be94c0fb4b10.png",
+          source: "https://hearthstone.blizzard.com/ru-ru/cards/2505/",
+          audios: [
+            {
+              label: "Play",
+              path: "soundpack/[2015.08.24] Большой турнир/Серебряный дозорный/VO_AT_109_PLAY_01.wav"
+            },
+            {
+              label: "Attack",
+              path: "soundpack/[2015.08.24] Большой турнир/Серебряный дозорный/VO_AT_109_ATTACK_02.wav"
+            }
+          ]
+        },
+        {
+          title: "Стяжатель",
+          set: "Пираты",
+          image:
+            "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/0673e1b745026420195f8bdf8579907f86fd694fa439a79a6fe7381a3da59267.png",
+          source: "https://hearthstone.blizzard.com/ru-ru/cards/61066-goldgrubber/",
+          audios: [
+            {
+              label: "Play",
+              path: "soundpack/Пираты/Стяжатель/VO_BGS_066_Male_Kobold_Attack_01.wav"
+            }
+          ]
+        }
+      ];
+
+      const grid = document.getElementById("grid");
+      const status = document.getElementById("status");
+
+      let currentAudio = null;
+      let currentButton = null;
+
+      function setButtonState(button, state) {
+        button.dataset.state = state;
+        button.setAttribute("aria-pressed", state === "playing" ? "true" : "false");
+        button.textContent = state === "playing" ? "Pause" : button.dataset.label;
+      }
+
+      function resetCurrent() {
+        if (currentAudio) {
+          currentAudio.pause();
+          currentAudio.currentTime = 0;
+        }
+
+        if (currentButton) {
+          setButtonState(currentButton, "idle");
+        }
+
+        currentAudio = null;
+        currentButton = null;
+      }
+
+      function playCard(card, clip, button) {
+        if (currentButton === button && currentAudio && !currentAudio.paused) {
+          resetCurrent();
+          status.textContent = `Paused: ${card.title} (${clip.label})`;
+          return;
+        }
+
+        resetCurrent();
+
+        const audio = new Audio(encodeURI(clip.path));
+        currentAudio = audio;
+        currentButton = button;
+        setButtonState(button, "playing");
+        status.textContent = `Playing: ${card.title} (${clip.label})`;
+
+        audio.addEventListener("ended", () => {
+          if (currentButton === button) {
+            resetCurrent();
+            status.textContent = `Finished: ${card.title} (${clip.label})`;
+          }
+        });
+
+        audio.addEventListener("error", () => {
+          if (currentButton === button) {
+            resetCurrent();
+            status.textContent = `Could not load audio: ${card.title} (${clip.label})`;
+          }
+        });
+
+        audio.play().catch(() => {
+          resetCurrent();
+          status.textContent = `Playback was blocked for: ${card.title} (${clip.label})`;
+        });
+      }
+
+      function renderCard(card) {
+        const tile = document.createElement("article");
+        tile.className = "card";
+
+        tile.innerHTML = `
+          <div class="content">
+            <a class="card-link" href="${card.source}">
+              <div class="art">
+                <img src="${card.image}" alt="${card.title}" loading="lazy" />
+              </div>
+              <div class="meta">
+                <div class="set">${card.set}</div>
+                <h2 class="title">${card.title}</h2>
+              </div>
+            </a>
+            <div class="actions">
+            </div>
+          </div>
+        `;
+
+        const actions = tile.querySelector(".actions");
+        card.audios.forEach((clip) => {
+          const button = document.createElement("button");
+          button.className = "button";
+          button.type = "button";
+          button.dataset.state = "idle";
+          button.dataset.label = clip.label;
+          button.setAttribute("aria-pressed", "false");
+          button.textContent = clip.label;
+          button.addEventListener("click", () => playCard(card, clip, button));
+          actions.append(button);
+        });
+
+        return tile;
+      }
+
+      cards.forEach((card) => {
+        grid.appendChild(renderCard(card));
+      });
+    </script>
+  </body>
+</html>

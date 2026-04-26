@@ -1,0 +1,429 @@
+{
+  "packs": {
+    "Поля сражений": [
+      {
+        "title": "Бармен Боб",
+        "blizzardUrl": "https://hearthstone.blizzard.com/ru-ru/cards/117723",
+        "imageUrl": "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/64b324cdecacd4751a76dd03b4c346ec8a1343a2fb145ac00ecc8bec276777f2.png",
+        "fsPath": "soundpack/1 БОБ",
+        "audios": [
+          "soundpack/1 БОБ/VO_DALA_BOSS_99h_Male_Human_AfterTriple_01.wav",
+          "soundpack/1 БОБ/VO_DALA_BOSS_99h_Male_Human_Behind_02.wav",
+          "soundpack/1 БОБ/VO_DALA_BOSS_99h_Male_Human_NewGame_01.wav",
+          "soundpack/1 БОБ/VO_DALA_BOSS_99h_Male_Human_Triple_02.wav"
+        ]
+      },
+      {
+        "title": "Стяжатель",
+        "blizzardUrl": "https://hearthstone.blizzard.com/ru-ru/cards/61066-goldgrubber/",
+        "imageUrl": "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/0673e1b745026420195f8bdf8579907f86fd694fa439a79a6fe7381a3da59267.png",
+        "fsPath": "soundpack/Пираты/Стяжатель",
+        "audios": [
+          "soundpack/Пираты/Стяжатель/VO_BGS_066_Male_Kobold_Attack_01.wav"
+        ]
+      },
+      {
+        "title": "Морской контрабандист",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/Пираты/Морской контрабандист",
+        "audios": [
+          "soundpack/Пираты/Морской контрабандист/VO_BG21_017_Male_NightElf_Attack_01.wav",
+          "soundpack/Пираты/Морской контрабандист/VO_BG21_017_Male_NightElf_Play_01.wav"
+        ]
+      },
+      {
+        "title": "Нат Пэгл, рыбак-экстремал",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/Пираты/Нат Пэгл, рыбак-экстремал",
+        "audios": [
+          "soundpack/Пираты/Нат Пэгл, рыбак-экстремал/VO_BGS_046_Male_Human_Attack_01.wav"
+        ]
+      }
+    ],
+    "Гоблины и гномы": [
+      {
+        "title": "Бомбометатель",
+        "blizzardUrl": "https://hearthstone.blizzard.com/ru-ru/cards/2067-bomb-lobber/",
+        "imageUrl": "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/a2a9f96397aaf73bc0eb00548a0e8857e09b1645c4376668817f9f7fd09ac8e6.png",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Бомбометатель",
+        "audios": [
+          "soundpack/[2014.12.8] Гоблины и Гномы/Бомбометатель/VO_GVG_099_Attack_02.wav"
+        ]
+      },
+      {
+        "title": "Боевой робот",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Боевой робот",
+        "audios": [
+          "soundpack/[2014.12.8] Гоблины и Гномы/Боевой робот/VO_GVG_051_Play_01.wav"
+        ]
+      },
+      {
+        "title": "Ветролет",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Ветролет",
+        "audios": [
+          "soundpack/[2014.12.8] Гоблины и Гномы/Ветролет/VO_GVG_084_Play_01.wav"
+        ]
+      },
+      {
+        "title": "Газлоу",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Газлоу",
+        "audios": [
+          "soundpack/[2014.12.8] Гоблины и Гномы/Газлоу/VO_GVG_117_Attack_02.wav",
+          "soundpack/[2014.12.8] Гоблины и Гномы/Газлоу/VO_GVG_117_Play_01.wav"
+        ]
+      },
+      {
+        "title": "Гном-техник",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Гном-техник",
+        "audios": [
+          "soundpack/[2014.12.8] Гоблины и Гномы/Гном-техник/VO_GVG_102_Play_01.wav"
+        ]
+      },
+      {
+        "title": "Гном-экспериментатор",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Гном-экспериментатор",
+        "audios": [
+          "soundpack/[2014.12.8] Гоблины и Гномы/Гном-экспериментатор/VO_GVG_092_Attack_02.wav",
+          "soundpack/[2014.12.8] Гоблины и Гномы/Гном-экспериментатор/VO_GVG_092_Play_01.wav"
+        ]
+      },
+      {
+        "title": "Гоблин-взрывомаг",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Гоблин-взрывомаг",
+        "audios": [
+          "soundpack/[2014.12.8] Гоблины и Гномы/Гоблин-взрывомаг/VO_GVG_004_Attack_02.wav",
+          "soundpack/[2014.12.8] Гоблины и Гномы/Гоблин-взрывомаг/VO_GVG_004_Play_01.wav"
+        ]
+      },
+      {
+        "title": "Гоблин-сапер",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Гоблин-сапер",
+        "audios": [
+          "soundpack/[2014.12.8] Гоблины и Гномы/Гоблин-сапер/VO_GVG_095_Attack_02.wav",
+          "soundpack/[2014.12.8] Гоблины и Гномы/Гоблин-сапер/VO_GVG_095_Play_01.wav"
+        ]
+      },
+      {
+        "title": "Грязевик",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Грязевик",
+        "audios": [
+          "soundpack/[2014.12.8] Гоблины и Гномы/Грязевик/SFX_GVG_064_EnterPlay.wav"
+        ]
+      },
+      {
+        "title": "Дживс",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Дживс",
+        "audios": [
+          "soundpack/[2014.12.8] Гоблины и Гномы/Дживс/VO_GVG_094_Attack_02.wav",
+          "soundpack/[2014.12.8] Гоблины и Гномы/Дживс/VO_GVG_094_Play_01.wav",
+          "soundpack/[2014.12.8] Гоблины и Гномы/Дживс/VO_GVG_094_Trigger_03.wav"
+        ]
+      },
+      {
+        "title": "Древний исцелятор",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Древний исцелятор",
+        "audios": [
+          "soundpack/[2014.12.8] Гоблины и Гномы/Древний исцелятор/VO_GVG_072_Attack_02.wav"
+        ]
+      },
+      {
+        "title": "Железный сенсей",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Железный сенсей",
+        "audios": [
+          "soundpack/[2014.12.8] Гоблины и Гномы/Железный сенсей/VO_GVG_027_Play_01_ALT.wav"
+        ]
+      },
+      {
+        "title": "Заводной гном",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Заводной гном",
+        "audios": [
+          "soundpack/[2014.12.8] Гоблины и Гномы/Заводной гном/VO_GVG_082_Play_01.wav"
+        ]
+      },
+      {
+        "title": "Защитница",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Защитница",
+        "audios": [
+          "soundpack/[2014.12.8] Гоблины и Гномы/Защитница/VO_GVG_053_Attack_02.wav"
+        ]
+      },
+      {
+        "title": "Защищенный мини-бот",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Защищенный мини-бот",
+        "audios": [
+          "soundpack/[2014.12.8] Гоблины и Гномы/Защищенный мини-бот/VO_GVG_058_Attack_02.wav",
+          "soundpack/[2014.12.8] Гоблины и Гномы/Защищенный мини-бот/VO_GVG_058_Play_01.wav"
+        ]
+      },
+      {
+        "title": "Интендант",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Интендант",
+        "audios": [
+          "soundpack/[2014.12.8] Гоблины и Гномы/Интендант/VO_GVG_060_Attack_02.wav"
+        ]
+      },
+      {
+        "title": "Кобальтовый страж",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Кобальтовый страж",
+        "audios": [
+          "soundpack/[2014.12.8] Гоблины и Гномы/Кобальтовый страж/VO_GVG_062_Attack_02.wav",
+          "soundpack/[2014.12.8] Гоблины и Гномы/Кобальтовый страж/VO_GVG_062_Play_01.wav"
+        ]
+      },
+      {
+        "title": "Мастер шестеренок",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Мастер шестеренок",
+        "audios": [
+          "soundpack/[2014.12.8] Гоблины и Гномы/Мастер шестеренок/VO_GVG_069_Attack_02.wav",
+          "soundpack/[2014.12.8] Гоблины и Гномы/Мастер шестеренок/VO_GVG_069_Play_01.wav"
+        ]
+      },
+      {
+        "title": "Механосборщик",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Механосборщик",
+        "audios": [
+          "soundpack/[2014.12.8] Гоблины и Гномы/Механосборщик/VO_GVG_006_Attack_02.wav"
+        ]
+      },
+      {
+        "title": "Микроробот",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Микроробот",
+        "audios": [
+          "soundpack/[2014.12.8] Гоблины и Гномы/Микроробот/VO_GVG_103_Play_01.wav"
+        ]
+      },
+      {
+        "title": "Мурлок-духостранник",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Мурлок-духостранник",
+        "audios": [
+          "soundpack/[2014.12.8] Гоблины и Гномы/Мурлок-духостранник/GVG_040_SiltfinSpiritwalker_EnterPlay.wav"
+        ]
+      },
+      {
+        "title": "Огненный левиафан",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Огненный левиафан",
+        "audios": [
+          "soundpack/[2014.12.8] Гоблины и Гномы/Огненный левиафан/VO_GVG_007_Trigger_04.wav"
+        ]
+      },
+      {
+        "title": "Просветительница",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Просветительница",
+        "audios": [
+          "soundpack/[2014.12.8] Гоблины и Гномы/Просветительница/VO_GVG_089_Play_01.wav"
+        ]
+      },
+      {
+        "title": "Раздражатор",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Раздражатор",
+        "audios": [
+          "soundpack/[2014.12.8] Гоблины и Гномы/Раздражатор/VO_GVG_085_Attack_02_ALT.wav",
+          "soundpack/[2014.12.8] Гоблины и Гномы/Раздражатор/VO_GVG_085_Play_01.wav"
+        ]
+      },
+      {
+        "title": "Хранительница рощи",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Хранительница рощи",
+        "audios": [
+          "soundpack/[2014.12.8] Гоблины и Гномы/Хранительница рощи/VO_GVG_032_Attack_02.wav"
+        ]
+      }
+    ],
+    "Большой турнир": [
+      {
+        "title": "Боец из Даларана",
+        "blizzardUrl": "https://hearthstone.blizzard.com/ru-ru/cards/2549",
+        "imageUrl": "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/6c48c7e203082de95a3d37f6fb21c44a2c6d965a135a15111945cfdd9f87868b.png",
+        "fsPath": "soundpack/[2015.08.24] Большой турнир/Боец из Даларана",
+        "audios": [
+          "soundpack/[2015.08.24] Большой турнир/Боец из Даларана/VO_AT_006_TRIGGER_04.wav"
+        ]
+      },
+      {
+        "title": "Серебряный дозорный",
+        "blizzardUrl": "https://hearthstone.blizzard.com/ru-ru/cards/2505/",
+        "imageUrl": "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/02cb33c2a6e6de6d286d966ee595bd9ae9a9c6de273a2ffb94f2be94c0fb4b10.png",
+        "fsPath": "soundpack/[2015.08.24] Большой турнир/Серебряный дозорный",
+        "audios": [
+          "soundpack/[2015.08.24] Большой турнир/Серебряный дозорный/VO_AT_109_ATTACK_02.wav",
+          "soundpack/[2015.08.24] Большой турнир/Серебряный дозорный/VO_AT_109_PLAY_01.wav"
+        ]
+      },
+      {
+        "title": "Великий бретер",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2015.08.24] Большой турнир/Великий бретер",
+        "audios": [
+          "soundpack/[2015.08.24] Большой турнир/Великий бретер/VO_AT_112_PLAY_01.wav"
+        ]
+      },
+      {
+        "title": "Великий рыцарь",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2015.08.24] Большой турнир/Великий рыцарь",
+        "audios": [
+          "soundpack/[2015.08.24] Большой турнир/Великий рыцарь/VO_AT_118_ATTACK_02.wav"
+        ]
+      },
+      {
+        "title": "Жонглер пламенем",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2015.08.24] Большой турнир/Жонглер пламенем",
+        "audios": [
+          "soundpack/[2015.08.24] Большой турнир/Жонглер пламенем/VO_AT_094_PLAY_01.wav"
+        ]
+      },
+      {
+        "title": "Загадочный претендент",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2015.08.24] Большой турнир/Загадочный претендент",
+        "audios": [
+          "soundpack/[2015.08.24] Большой турнир/Загадочный претендент/VO_AT_079_ATTACK_02.wav",
+          "soundpack/[2015.08.24] Большой турнир/Загадочный претендент/VO_AT_079_PLAY_01.wav"
+        ]
+      },
+      {
+        "title": "Защитник Света",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2015.08.24] Большой турнир/Защитник Света",
+        "audios": [
+          "soundpack/[2015.08.24] Большой турнир/Защитник Света/VO_AT_106_PLAY_01.wav"
+        ]
+      },
+      {
+        "title": "Злобный насмешник",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2015.08.24] Большой турнир/Злобный насмешник",
+        "audios": [
+          "soundpack/[2015.08.24] Большой турнир/Злобный насмешник/VO_AT_114_PLAY_01.wav",
+          "soundpack/[2015.08.24] Большой турнир/Злобный насмешник/VO_AT_114_PLAY_ALT1_02.wav"
+        ]
+      },
+      {
+        "title": "Святая защитница",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2015.08.24] Большой турнир/Святая защитница",
+        "audios": [
+          "soundpack/[2015.08.24] Большой турнир/Святая защитница/VO_AT_011_ATTACK_02.wav",
+          "soundpack/[2015.08.24] Большой турнир/Святая защитница/VO_AT_011_PLAY_01.wav"
+        ]
+      },
+      {
+        "title": "Серебряный всадник",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2015.08.24] Большой турнир/Серебряный всадник",
+        "audios": [
+          "soundpack/[2015.08.24] Большой турнир/Серебряный всадник/VO_AT_087_ATTACK_04.wav",
+          "soundpack/[2015.08.24] Большой турнир/Серебряный всадник/VO_AT_087_PLAY_ALT1_02.wav"
+        ]
+      },
+      {
+        "title": "Скромный оруженосец",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2015.08.24] Большой турнир/Скромный оруженосец",
+        "audios": [
+          "soundpack/[2015.08.24] Большой турнир/Скромный оруженосец/VO_AT_082_PLAY_01.wav"
+        ]
+      },
+      {
+        "title": "Сомнительный делец",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2015.08.24] Большой турнир/Сомнительный делец",
+        "audios": [
+          "soundpack/[2015.08.24] Большой турнир/Сомнительный делец/VO_AT_032_PLAY_01.wav"
+        ]
+      },
+      {
+        "title": "Спарринг-партнер",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2015.08.24] Большой турнир/Спарринг-партнер",
+        "audios": [
+          "soundpack/[2015.08.24] Большой турнир/Спарринг-партнер/VO_AT_069_PLAY_01.wav"
+        ]
+      }
+    ],
+    "Проклятие Наксрамаса": [
+      {
+        "title": "1 Приключение",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/[2014.07.22] Проклятие Наксрамаса/1 Приключение",
+        "audios": [
+          "soundpack/[2014.07.22] Проклятие Наксрамаса/1 Приключение/Кел_Тузад/VO_NAX15_01_RESPOND_GULDAN_22.wav"
+        ]
+      }
+    ],
+    "Нейтральные - Все": [
+      {
+        "title": "Нетерпеливая вестница Рока",
+        "blizzardUrl": "",
+        "imageUrl": "",
+        "fsPath": "soundpack/Нейтральные - Все/Нетерпеливая вестница Рока",
+        "audios": [
+          "soundpack/Нейтральные - Все/Нетерпеливая вестница Рока/VO_BG21_007_Female_Human_Attack_01.wav"
+        ]
+      }
+    ]
+  }
+}
