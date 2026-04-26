@@ -108,6 +108,15 @@
         object-fit: cover;
       }
 
+      .art-placeholder {
+        display: grid;
+        place-items: center;
+        width: 100%;
+        height: 100%;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
       .content {
         display: grid;
         gap: 0.9rem;
@@ -119,6 +128,10 @@
         gap: 0.9rem;
         color: inherit;
         text-decoration: none;
+      }
+
+      .card-link[aria-disabled="true"] {
+        cursor: default;
       }
 
       .meta {
@@ -202,13 +215,9 @@
   <body>
     <main class="shell">
       <header class="hero">
-        <p class="eyebrow">Static Sample</p>
+        <p class="eyebrow">Generated from meta.json</p>
         <h1>Hearthstone Sound Pack</h1>
-        <p class="intro">
-          Five mapped cards pulled from the local <code>soundpack/</code> tree. Each tile uses a verified
-          Blizzard card image and page URL, while playback comes from the local <code>.wav</code> assets in
-          this repository.
-        </p>
+        <p class="intro" id="summary"></p>
         <p class="status" id="status" aria-live="polite">Ready.</p>
       </header>
 
@@ -218,78 +227,617 @@
     <script>
       const cards = [
         {
-          title: "Бармен Боб",
-          set: "1 БОБ",
-          image:
-            "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/64b324cdecacd4751a76dd03b4c346ec8a1343a2fb145ac00ecc8bec276777f2.png",
-          source: "https://hearthstone.blizzard.com/ru-ru/cards/117723",
-          audios: [
-            {
-              label: "Play",
-              path: "soundpack/1 БОБ/VO_DALA_BOSS_99h_Male_Human_Behind_02.wav"
-            }
-          ]
+                "title": "1 Приключение",
+                "set": "[2014.07.22] Проклятие Наксрамаса",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/NAX15_01.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2014.07.22] Проклятие Наксрамаса/1 Приключение/Кел_Тузад/VO_NAX15_01_RESPOND_GULDAN_22.wav"
+                        }
+                ]
         },
         {
-          title: "Бомбометатель",
-          set: "[2014.12.8] Гоблины и Гномы",
-          image:
-            "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/a2a9f96397aaf73bc0eb00548a0e8857e09b1645c4376668817f9f7fd09ac8e6.png",
-          source: "https://hearthstone.blizzard.com/ru-ru/cards/2067-bomb-lobber/",
-          audios: [
-            {
-              label: "Play",
-              path: "soundpack/[2014.12.8] Гоблины и Гномы/Бомбометатель/VO_GVG_099_Attack_02.wav"
-            }
-          ]
+                "title": "Боевой робот",
+                "set": "[2014.12.8] Гоблины и Гномы",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/GVG_051.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Боевой робот/VO_GVG_051_Play_01.wav"
+                        }
+                ]
         },
         {
-          title: "Боец из Даларана",
-          set: "[2015.08.24] Большой турнир",
-          image:
-            "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/6c48c7e203082de95a3d37f6fb21c44a2c6d965a135a15111945cfdd9f87868b.png",
-          source: "https://hearthstone.blizzard.com/ru-ru/cards/2549",
-          audios: [
-            {
-              label: "Play",
-              path: "soundpack/[2015.08.24] Большой турнир/Боец из Даларана/VO_AT_006_TRIGGER_04.wav"
-            }
-          ]
+                "title": "Бомбометатель",
+                "set": "[2014.12.8] Гоблины и Гномы",
+                "image": "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/a2a9f96397aaf73bc0eb00548a0e8857e09b1645c4376668817f9f7fd09ac8e6.png",
+                "source": "https://hearthstone.blizzard.com/ru-ru/cards/2067-bomb-lobber/",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Бомбометатель/VO_GVG_099_Attack_02.wav"
+                        }
+                ]
         },
         {
-          title: "Серебряный дозорный",
-          set: "[2015.08.24] Большой турнир",
-          image:
-            "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/02cb33c2a6e6de6d286d966ee595bd9ae9a9c6de273a2ffb94f2be94c0fb4b10.png",
-          source: "https://hearthstone.blizzard.com/ru-ru/cards/2505/",
-          audios: [
-            {
-              label: "Play",
-              path: "soundpack/[2015.08.24] Большой турнир/Серебряный дозорный/VO_AT_109_PLAY_01.wav"
-            },
-            {
-              label: "Attack",
-              path: "soundpack/[2015.08.24] Большой турнир/Серебряный дозорный/VO_AT_109_ATTACK_02.wav"
-            }
-          ]
+                "title": "Ветролет",
+                "set": "[2014.12.8] Гоблины и Гномы",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/GVG_084.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Ветролет/VO_GVG_084_Play_01.wav"
+                        }
+                ]
         },
         {
-          title: "Стяжатель",
-          set: "Пираты",
-          image:
-            "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/0673e1b745026420195f8bdf8579907f86fd694fa439a79a6fe7381a3da59267.png",
-          source: "https://hearthstone.blizzard.com/ru-ru/cards/61066-goldgrubber/",
-          audios: [
-            {
-              label: "Play",
-              path: "soundpack/Пираты/Стяжатель/VO_BGS_066_Male_Kobold_Attack_01.wav"
-            }
-          ]
+                "title": "Газлоу",
+                "set": "[2014.12.8] Гоблины и Гномы",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/GVG_117.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Газлоу/VO_GVG_117_Attack_02.wav"
+                        },
+                        {
+                                "label": "Clip 2",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Газлоу/VO_GVG_117_Play_01.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Гном-техник",
+                "set": "[2014.12.8] Гоблины и Гномы",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/GVG_102.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Гном-техник/VO_GVG_102_Play_01.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Гном-экспериментатор",
+                "set": "[2014.12.8] Гоблины и Гномы",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/GVG_092.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Гном-экспериментатор/VO_GVG_092_Attack_02.wav"
+                        },
+                        {
+                                "label": "Clip 2",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Гном-экспериментатор/VO_GVG_092_Play_01.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Гоблин-взрывомаг",
+                "set": "[2014.12.8] Гоблины и Гномы",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/GVG_004.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Гоблин-взрывомаг/VO_GVG_004_Attack_02.wav"
+                        },
+                        {
+                                "label": "Clip 2",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Гоблин-взрывомаг/VO_GVG_004_Play_01.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Гоблин-сапер",
+                "set": "[2014.12.8] Гоблины и Гномы",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/GVG_095.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Гоблин-сапер/VO_GVG_095_Attack_02.wav"
+                        },
+                        {
+                                "label": "Clip 2",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Гоблин-сапер/VO_GVG_095_Play_01.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Грязевик",
+                "set": "[2014.12.8] Гоблины и Гномы",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/GVG_064.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Грязевик/SFX_GVG_064_EnterPlay.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Дживс",
+                "set": "[2014.12.8] Гоблины и Гномы",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/GVG_094.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Дживс/VO_GVG_094_Attack_02.wav"
+                        },
+                        {
+                                "label": "Clip 2",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Дживс/VO_GVG_094_Play_01.wav"
+                        },
+                        {
+                                "label": "Clip 3",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Дживс/VO_GVG_094_Trigger_03.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Древний исцелятор",
+                "set": "[2014.12.8] Гоблины и Гномы",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/GVG_072.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Древний исцелятор/VO_GVG_072_Attack_02.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Железный сенсей",
+                "set": "[2014.12.8] Гоблины и Гномы",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/GVG_027.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Железный сенсей/VO_GVG_027_Play_01_ALT.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Заводной гном",
+                "set": "[2014.12.8] Гоблины и Гномы",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/GVG_082.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Заводной гном/VO_GVG_082_Play_01.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Защитница",
+                "set": "[2014.12.8] Гоблины и Гномы",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/GVG_053.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Защитница/VO_GVG_053_Attack_02.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Защищенный мини-бот",
+                "set": "[2014.12.8] Гоблины и Гномы",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/GVG_058.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Защищенный мини-бот/VO_GVG_058_Attack_02.wav"
+                        },
+                        {
+                                "label": "Clip 2",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Защищенный мини-бот/VO_GVG_058_Play_01.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Интендант",
+                "set": "[2014.12.8] Гоблины и Гномы",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/GVG_060.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Интендант/VO_GVG_060_Attack_02.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Кобальтовый страж",
+                "set": "[2014.12.8] Гоблины и Гномы",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/GVG_062.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Кобальтовый страж/VO_GVG_062_Attack_02.wav"
+                        },
+                        {
+                                "label": "Clip 2",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Кобальтовый страж/VO_GVG_062_Play_01.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Мастер шестеренок",
+                "set": "[2014.12.8] Гоблины и Гномы",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/GVG_069.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Мастер шестеренок/VO_GVG_069_Attack_02.wav"
+                        },
+                        {
+                                "label": "Clip 2",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Мастер шестеренок/VO_GVG_069_Play_01.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Механосборщик",
+                "set": "[2014.12.8] Гоблины и Гномы",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/GVG_006.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Механосборщик/VO_GVG_006_Attack_02.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Микроробот",
+                "set": "[2014.12.8] Гоблины и Гномы",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/GVG_103.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Микроробот/VO_GVG_103_Play_01.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Мурлок-духостранник",
+                "set": "[2014.12.8] Гоблины и Гномы",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/GVG_040.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Мурлок-духостранник/GVG_040_SiltfinSpiritwalker_EnterPlay.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Огненный левиафан",
+                "set": "[2014.12.8] Гоблины и Гномы",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/GVG_007.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Огненный левиафан/VO_GVG_007_Trigger_04.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Просветительница",
+                "set": "[2014.12.8] Гоблины и Гномы",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/GVG_089.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Просветительница/VO_GVG_089_Play_01.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Раздражатор",
+                "set": "[2014.12.8] Гоблины и Гномы",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/GVG_085.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Раздражатор/VO_GVG_085_Attack_02_ALT.wav"
+                        },
+                        {
+                                "label": "Clip 2",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Раздражатор/VO_GVG_085_Play_01.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Хранительница рощи",
+                "set": "[2014.12.8] Гоблины и Гномы",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/GVG_032.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2014.12.8] Гоблины и Гномы/Хранительница рощи/VO_GVG_032_Attack_02.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Боец из Даларана",
+                "set": "[2015.08.24] Большой турнир",
+                "image": "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/6c48c7e203082de95a3d37f6fb21c44a2c6d965a135a15111945cfdd9f87868b.png",
+                "source": "https://hearthstone.blizzard.com/ru-ru/cards/2549",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2015.08.24] Большой турнир/Боец из Даларана/VO_AT_006_TRIGGER_04.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Великий бретер",
+                "set": "[2015.08.24] Большой турнир",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/AT_112.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2015.08.24] Большой турнир/Великий бретер/VO_AT_112_PLAY_01.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Великий рыцарь",
+                "set": "[2015.08.24] Большой турнир",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/AT_118.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2015.08.24] Большой турнир/Великий рыцарь/VO_AT_118_ATTACK_02.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Жонглер пламенем",
+                "set": "[2015.08.24] Большой турнир",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/AT_094.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2015.08.24] Большой турнир/Жонглер пламенем/VO_AT_094_PLAY_01.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Загадочный претендент",
+                "set": "[2015.08.24] Большой турнир",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/AT_079.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2015.08.24] Большой турнир/Загадочный претендент/VO_AT_079_ATTACK_02.wav"
+                        },
+                        {
+                                "label": "Clip 2",
+                                "path": "soundpack/[2015.08.24] Большой турнир/Загадочный претендент/VO_AT_079_PLAY_01.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Защитник Света",
+                "set": "[2015.08.24] Большой турнир",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/AT_106.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2015.08.24] Большой турнир/Защитник Света/VO_AT_106_PLAY_01.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Злобный насмешник",
+                "set": "[2015.08.24] Большой турнир",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/AT_114.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2015.08.24] Большой турнир/Злобный насмешник/VO_AT_114_PLAY_01.wav"
+                        },
+                        {
+                                "label": "Clip 2",
+                                "path": "soundpack/[2015.08.24] Большой турнир/Злобный насмешник/VO_AT_114_PLAY_ALT1_02.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Святая защитница",
+                "set": "[2015.08.24] Большой турнир",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/AT_011.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2015.08.24] Большой турнир/Святая защитница/VO_AT_011_ATTACK_02.wav"
+                        },
+                        {
+                                "label": "Clip 2",
+                                "path": "soundpack/[2015.08.24] Большой турнир/Святая защитница/VO_AT_011_PLAY_01.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Серебряный всадник",
+                "set": "[2015.08.24] Большой турнир",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/AT_087.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2015.08.24] Большой турнир/Серебряный всадник/VO_AT_087_ATTACK_04.wav"
+                        },
+                        {
+                                "label": "Clip 2",
+                                "path": "soundpack/[2015.08.24] Большой турнир/Серебряный всадник/VO_AT_087_PLAY_ALT1_02.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Серебряный дозорный",
+                "set": "[2015.08.24] Большой турнир",
+                "image": "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/02cb33c2a6e6de6d286d966ee595bd9ae9a9c6de273a2ffb94f2be94c0fb4b10.png",
+                "source": "https://hearthstone.blizzard.com/ru-ru/cards/2505/",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2015.08.24] Большой турнир/Серебряный дозорный/VO_AT_109_ATTACK_02.wav"
+                        },
+                        {
+                                "label": "Clip 2",
+                                "path": "soundpack/[2015.08.24] Большой турнир/Серебряный дозорный/VO_AT_109_PLAY_01.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Скромный оруженосец",
+                "set": "[2015.08.24] Большой турнир",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/AT_082.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2015.08.24] Большой турнир/Скромный оруженосец/VO_AT_082_PLAY_01.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Сомнительный делец",
+                "set": "[2015.08.24] Большой турнир",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/AT_032.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2015.08.24] Большой турнир/Сомнительный делец/VO_AT_032_PLAY_01.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Спарринг-партнер",
+                "set": "[2015.08.24] Большой турнир",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/AT_069.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/[2015.08.24] Большой турнир/Спарринг-партнер/VO_AT_069_PLAY_01.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Бармен Боб",
+                "set": "1 БОБ",
+                "image": "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/64b324cdecacd4751a76dd03b4c346ec8a1343a2fb145ac00ecc8bec276777f2.png",
+                "source": "https://hearthstone.blizzard.com/ru-ru/cards/117723",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/1 БОБ/VO_DALA_BOSS_99h_Male_Human_AfterTriple_01.wav"
+                        },
+                        {
+                                "label": "Clip 2",
+                                "path": "soundpack/1 БОБ/VO_DALA_BOSS_99h_Male_Human_Behind_02.wav"
+                        },
+                        {
+                                "label": "Clip 3",
+                                "path": "soundpack/1 БОБ/VO_DALA_BOSS_99h_Male_Human_NewGame_01.wav"
+                        },
+                        {
+                                "label": "Clip 4",
+                                "path": "soundpack/1 БОБ/VO_DALA_BOSS_99h_Male_Human_Triple_02.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Нетерпеливая вестница Рока",
+                "set": "Нейтральные - Все",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/BG21_007.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/Нейтральные - Все/Нетерпеливая вестница Рока/VO_BG21_007_Female_Human_Attack_01.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Морской контрабандист",
+                "set": "Пираты",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/BG21_017.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/Пираты/Морской контрабандист/VO_BG21_017_Male_NightElf_Attack_01.wav"
+                        },
+                        {
+                                "label": "Clip 2",
+                                "path": "soundpack/Пираты/Морской контрабандист/VO_BG21_017_Male_NightElf_Play_01.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Нат Пэгл, рыбак-экстремал",
+                "set": "Пираты",
+                "image": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/BGS_046.png",
+                "source": "",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/Пираты/Нат Пэгл, рыбак-экстремал/VO_BGS_046_Male_Human_Attack_01.wav"
+                        }
+                ]
+        },
+        {
+                "title": "Стяжатель",
+                "set": "Пираты",
+                "image": "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/0673e1b745026420195f8bdf8579907f86fd694fa439a79a6fe7381a3da59267.png",
+                "source": "https://hearthstone.blizzard.com/ru-ru/cards/61066-goldgrubber/",
+                "audios": [
+                        {
+                                "label": "Play",
+                                "path": "soundpack/Пираты/Стяжатель/VO_BGS_066_Male_Kobold_Attack_01.wav"
+                        }
+                ]
         }
-      ];
+];
 
       const grid = document.getElementById("grid");
       const status = document.getElementById("status");
+      const summary = document.getElementById("summary");
+
+      const totalClips = cards.reduce((sum, card) => sum + card.audios.length, 0);
+      summary.textContent = `Catalog: ${cards.length} cards, ${totalClips} audio clips from local soundpack files.`;
 
       let currentAudio = null;
       let currentButton = null;
@@ -353,23 +901,50 @@
         const tile = document.createElement("article");
         tile.className = "card";
 
-        tile.innerHTML = `
-          <div class="content">
-            <a class="card-link" href="${card.source}">
-              <div class="art">
-                <img src="${card.image}" alt="${card.title}" loading="lazy" />
-              </div>
-              <div class="meta">
-                <div class="set">${card.set}</div>
-                <h2 class="title">${card.title}</h2>
-              </div>
-            </a>
-            <div class="actions">
-            </div>
-          </div>
-        `;
+        const hasSource = typeof card.source === "string" && card.source.length > 0;
+        const hasImage = typeof card.image === "string" && card.image.length > 0;
 
-        const actions = tile.querySelector(".actions");
+        const link = document.createElement("a");
+        link.className = "card-link";
+        link.href = hasSource ? card.source : "#";
+        if (!hasSource) {
+          link.setAttribute("aria-disabled", "true");
+          link.addEventListener("click", (event) => event.preventDefault());
+        }
+
+        const art = document.createElement("div");
+        art.className = "art";
+        if (hasImage) {
+          const img = document.createElement("img");
+          img.src = card.image;
+          img.alt = card.title;
+          img.loading = "lazy";
+          art.appendChild(img);
+        } else {
+          const ph = document.createElement("div");
+          ph.className = "art-placeholder";
+          ph.textContent = "No image";
+          art.appendChild(ph);
+        }
+
+        const meta = document.createElement("div");
+        meta.className = "meta";
+        const set = document.createElement("div");
+        set.className = "set";
+        set.textContent = card.set;
+        const title = document.createElement("h2");
+        title.className = "title";
+        title.textContent = card.title;
+        meta.append(set, title);
+
+        link.append(art, meta);
+
+        const content = document.createElement("div");
+        content.className = "content";
+        content.appendChild(link);
+
+        const actions = document.createElement("div");
+        actions.className = "actions";
         card.audios.forEach((clip) => {
           const button = document.createElement("button");
           button.className = "button";
@@ -381,6 +956,9 @@
           button.addEventListener("click", () => playCard(card, clip, button));
           actions.append(button);
         });
+
+        content.appendChild(actions);
+        tile.appendChild(content);
 
         return tile;
       }
