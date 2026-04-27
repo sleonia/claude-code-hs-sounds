@@ -9,7 +9,7 @@ const repoRoot = path.join(__dirname, "../..");
 
 const selector = new SoundSelector(repoRoot);
 
-export default async function handler(args) {
+async function handler() {
   const soundPath = selector.getRandomSound();
   if (!soundPath) {
     throw new Error("No sounds available");
@@ -17,3 +17,5 @@ export default async function handler(args) {
 
   await AudioPlayer.play(soundPath);
 }
+
+void handler();

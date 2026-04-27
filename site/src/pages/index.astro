@@ -1,7 +1,6 @@
 ---
 import Hero from "../components/Hero.astro";
 import CardTile from "../components/CardTile.astro";
-import Filter from "../components/Filter.astro";
 import GridWrapper from "../components/GridWrapper.astro";
 import { cards, totalClips } from "../data/cards";
 
@@ -17,7 +16,6 @@ const uniqueSets = Array.from(new Set(cards.map((card) => card.set))).sort();
   <body>
     <main class="shell">
       <Hero cardCount={cards.length} clipCount={totalClips}>
-        <Filter sets={uniqueSets} />
       </Hero>
       <GridWrapper>
         <section class="grid" aria-label="Mapped cards">
@@ -106,7 +104,6 @@ const uniqueSets = Array.from(new Set(cards.map((card) => card.set))).sort();
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
     padding: 0 4rem;
   }
 
@@ -129,7 +126,6 @@ const uniqueSets = Array.from(new Set(cards.map((card) => card.set))).sort();
     }
 
     .grid {
-      gap: 1.25rem;
       padding: 0 1rem;
     }
   }
