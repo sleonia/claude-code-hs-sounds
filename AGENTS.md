@@ -52,3 +52,32 @@ Before submitting changes, spot-check audio duration and playback for any files 
 This workspace snapshot does not include Git history, so no local convention can be inferred. Use short imperative commit subjects such as `remove long voice lines` or `add missing Bob clips`.
 
 Pull requests should include a brief summary of what changed, affected folders, any bulk rename or delete rationale, and notes about macOS-only validation if relevant.
+
+## Claude Code Plugin
+
+The repository includes a Claude Code plugin that provides a custom slash command for playing random sounds as AI agent notifications.
+
+### Plugin Architecture
+
+- **Location**: `plugin/` directory
+- **Entry point**: `plugin/src/index.mjs`
+- **Manifest**: `plugin/manifest.json`
+- **Command**: `/hs-sounds:test-sounds` - plays a random sound from the pack
+
+### Sound Selection
+
+The plugin reads `meta.json` to build a flat list of all 125+ audio clips. When invoked, it uses a simple random index selection to pick a sound. This ensures all sounds have equal probability of being played.
+
+### Audio Playback
+
+The plugin uses macOS's built-in `afplay` command for audio playback. No external dependencies are required.
+
+### Codex Compatibility
+
+Codex (OpenAI) uses a different plugin architecture focused on web-based APIs and function calling. It does not support:
+
+- Custom slash commands
+- Local file system access
+- System audio playback
+
+For this reason, the plugin is designed specifically for Claude Code.

@@ -11,3 +11,22 @@ Tested only on MacOS other platforms are not tested, but PRs are welcome.
 - [Oficial site with cards](https://hearthstone.blizzard.com/ru-ru/cards)
 
 I also took inspiration from this repo: https://github.com/newink/claudecode-sounds/tree/main
+
+## Install
+
+### Claude Code
+
+This sound pack is available as a Claude Code plugin. Install it to get AI agent notifications from Hearthstone's golden era.
+
+1. Open Claude Code
+2. Navigate to the Plugin Marketplace
+3. Search for "Hearthstone Sound Pack"
+4. Click Install
+
+**Usage:** Run `/hs-sounds:test-sounds` to play a random sound from the collection.
+
+**Platform:** macOS only—uses the built-in `afplay` command.
+
+### Codex (OpenAI)
+
+Codex does not support local audio playback plugins. The sound files can be used manually with your preferred audio player, or consider using Claude Code for integrated sound notifications.

@@ -1,0 +1,15 @@
+{
+  "name": "hearthstone-sounds",
+  "displayName": "Hearthstone Sound Pack",
+  "version": "1.0.0",
+  "description": "AI agent notifications from Hearthstone's golden era",
+  "author": "sleonia",
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "hs-sounds:test-sounds",
+      "description": "Play a random Hearthstone sound",
+      "handler": "src/index.mjs"
+    }
+  ]
+}

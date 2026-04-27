@@ -1,0 +1,9 @@
+{
+  "name": "Hearthstone Sounds",
+  "plugins": [
+    {
+      "name": "hearthstone-sounds",
+      "source": "./plugin"
+    }
+  ]
+}

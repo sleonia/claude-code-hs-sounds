@@ -87,9 +87,11 @@ const hasImage = card.image.length > 0;
   .art {
     border-radius: 12px;
     overflow: hidden;
+    transition: transform 0.2s ease;
 
     &:hover {
       filter: drop-shadow(rgba(255, 255, 255, 0.6) 0px 0px 15px);
+      transform: scale(1.1);
     }
   }
 
@@ -154,6 +156,12 @@ const hasImage = card.image.length > 0;
     z-index: 2;
     background-color: transparent;
     background-image: none;
+
+    &:hover {
+          transform: scale(1.1);
+    filter: brightness(1.1);
+
+    }
   }
 
   .play-icon {
@@ -162,6 +170,7 @@ const hasImage = card.image.length > 0;
     object-fit: contain;
     pointer-events: none;
     z-index: 1;
+
   }
 
   @media (max-width: 640px) {
