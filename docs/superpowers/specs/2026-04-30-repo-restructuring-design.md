@@ -186,7 +186,8 @@ rmdir plugin
 ### Step 3: Update imports
 
 - Edit `src/claude/src/index.mjs`
-- Change imports to: `from "../shared/src/sound-selector.mjs"`
+- Change imports to: `from "../../../shared/src/sound-selector.mjs"`
+- After build, `dist/claude/src/index.mjs` will import from: `from "./shared/sound-selector.mjs"`
 
 ### Step 4: Create build script
 
