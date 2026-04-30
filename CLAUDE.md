@@ -6,7 +6,7 @@ We use JavaScript (type="module") for scripting.
 
 This repository is a curated Hearthstone sound pack for local notification use. The main content lives under `soundpack/`. Top-level folders group assets by set or category, for example `soundpack/[2015.08.24] Большой турнир/` and `soundpack/Пираты/`. Individual card or character folders contain `.wav` files named after in-game voice or SFX identifiers such as `VO_AT_109_PLAY_01.wav`.
 
-Keep new assets inside the existing set/category structure. Store documentation and generated metadata at the repository root in files like `README.md`, `AGENTS.md`, and `meta.json`.
+Keep new assets inside the existing set/category structure. Store documentation and generated metadata at the repository root in files like `README.md`, `CLAUDE.md`, and `meta.json`.
 
 ## Build, Test, and Development Commands
 
@@ -73,7 +73,7 @@ The plugin source code is organized as follows:
 src/
 ├── claude/           # Claude Code-specific plugin code
 │   ├── src/          # Plugin entry point and Claude-specific logic
-│   ├── commands/     # Command definitions (e.g., hs-sounds_test-sounds.md)
+│   ├── commands/     # Command definitions (e.g., play-sound.md)
 │   ├── hooks/        # Claude Code hooks
 │   └── manifest.json # Plugin manifest
 └── shared/           # Shared code for multiple AI agents
@@ -100,7 +100,7 @@ The build system creates distributable plugin packages:
 - **Location**: `dist/claude/` directory (after build)
 - **Entry point**: `src/index.mjs`
 - **Manifest**: `manifest.json`
-- **Command**: `/hs-sounds:test-sounds` - plays a random sound from the pack
+- **Command**: `/hearthstone-sounds:play-sound` - plays a random sound from the pack
 
 ### Sound Selection
 

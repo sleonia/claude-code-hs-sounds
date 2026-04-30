@@ -23,7 +23,7 @@ This sound pack is available as a Claude Code plugin on the marketplace. Install
 1. Run `/plugin marketplace add https://github.com/sleonia/hs-sound-pack --scope user`
 2. Run `/reload-plugins` to load the plugin
 
-**Usage:** Run `/hearthstone-sounds:play` to play a random sound from the collection.
+**Usage:** Run `/hearthstone-sounds:play-sound` to play a random sound from the collection.
 
 **Platform:** macOS only—uses the built-in `afplay` command.
 

@@ -1,5 +1,5 @@
 ---
-name: hs-sounds:test-sound
+name: play-sound
 description: Play all notification sounds to test your soundpack
 prefix-required: true
 allowed-tools:
