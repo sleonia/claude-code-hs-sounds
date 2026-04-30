@@ -31,9 +31,15 @@ Then, inside Claude Code, register the marketplace and install the plugin
 (one-time):
 
 ```
-/plugin marketplace add ~/.claude/hs-sound-pack
-/plugin install hearthstone-sounds@hs-sound-pack
-/reload-plugins
+claude marketplace add ~/.claude/hs-sound-pack
+claude install hearthstone-sounds@hs-sound-pack
+
+# You can test it both ways:
+# 1. Run claude code and run the testing command and hear the sound
+claude
+/play-sound
+
+# 2. Or you call bash ` claude -p "ask me smth"` and hear the sound
 ```
 
 **Usage:** run `/hearthstone-sounds:play-sound` to play a random sound.
