@@ -1,0 +1,15 @@
+{
+  "name": "hs-sound-pack",
+  "owner": {
+    "name": "sleonia"
+  },
+  "plugins": [
+    {
+      "name": "hearthstone-sounds",
+      "source": "./dist/claude",
+      "description": "Play memorable Hearthstone sounds when Claude Code needs your attention",
+      "version": "1.0.0",
+      "keywords": ["sounds", "notifications", "audio", "hearthstone"]
+    }
+  ]
+}
