@@ -49,11 +49,45 @@ claude
 After cloning, the source repo is no longer needed at runtime — the install
 script copies everything the plugin needs into `~/.claude/hs-sound-pack/`.
 
-### Codex (OpenAI)
+### OpenCode
 
-Codex does not support local audio playback plugins. The sound files can be
-used manually with your preferred audio player, or consider using Claude Code
-for integrated sound notifications.
+Clone the repository and build the OpenCode plugin:
+
+```bash
+git clone https://github.com/sleonia/claude-code-hs-sounds.git
+cd claude-code-hs-sounds
+node scripts/build.mjs opencode
+```
+
+Then copy the built distribution to the OpenCode plugin directory:
+
+```bash
+cp -R dist/opencode/plugins ~/.config/opencode/
+cp -R dist/opencode/commands ~/.config/opencode/
+cp -R dist/opencode/src ~/.config/opencode/
+cp -R dist/opencode/soundpack ~/.config/opencode/
+cp dist/opencode/meta.json ~/.config/opencode/
+```
+
+Or to install for a specific project only:
+
+```bash
+cp -R dist/opencode/plugins .opencode/
+cp -R dist/opencode/commands .opencode/
+cp -R dist/opencode/src .opencode/
+cp -R dist/opencode/soundpack .opencode/
+cp dist/opencode/meta.json .
+```
+
+**Usage:** Run OpenCode from your project directory — the plugin auto-loads and plays sounds on `session.idle`, `permission.asked`, and `session.error` events.
+
+**Test:** Run `/play-sound` in OpenCode to verify playback works, or test manually:
+
+```bash
+node ~/.config/opencode/src/index.mjs
+```
+
+**Platform:** macOS only — playback uses the built-in `afplay` command.
 
 ## Uninstall
 
@@ -71,6 +105,8 @@ The build requires no external dependencies — only Node.js built-ins are used.
 
 ```bash
 node scripts/build.mjs claude   # or: npm run build:claude
+node scripts/build.mjs opencode # or: npm run build:opencode
+node scripts/build.mjs          # build both
 ```
 
 This produces a self-contained distribution at `dist/claude/`. To build **and**

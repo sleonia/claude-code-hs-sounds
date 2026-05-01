@@ -5,6 +5,7 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "build:claude": "node scripts/build.mjs claude",
+    "build:opencode": "node scripts/build.mjs opencode",
     "format": "prettier --write \"**/*.{js,ts,json,md}\" \"site/src/**/*.{astro,js,ts,css,scss,json,md}\"",
     "postinstall": "npm run build"
   },

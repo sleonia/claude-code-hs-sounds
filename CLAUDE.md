@@ -10,13 +10,17 @@ Keep new assets inside the existing set/category structure. Store documentation 
 
 ## Build, Test, and Development Commands
 
-The repository includes a build system for creating distributable Claude Code plugins.
+The repository includes a build system for creating distributable plugins for both Claude Code and OpenCode.
 
 ### Build Commands
 
-- `node scripts/build.mjs claude` (or `npm run build:claude`): build the Claude Code plugin distribution to `dist/claude/`. The build only uses Node built-ins, so `npm install` is not required to build.
-- `./install.sh`: build the plugin and install it as a local marketplace under `~/.claude/hs-sound-pack/`. After running, register it inside Claude Code with `/plugin marketplace add ~/.claude/hs-sound-pack` then `/plugin install hearthstone-sounds@hs-sound-pack`.
+- `node scripts/build.mjs claude` (or `npm run build:claude`): build the Claude Code plugin distribution to `dist/claude/`.
+- `node scripts/build.mjs opencode` (or `npm run build:opencode`): build the OpenCode plugin distribution to `dist/opencode/`.
+- `node scripts/build.mjs` (or `npm run build`): build both Claude Code and OpenCode plugins.
+- `./install.sh`: build the Claude Code plugin and install it as a local marketplace under `~/.claude/hs-sound-pack/`. After running, register it inside Claude Code with `/plugin marketplace add ~/.claude/hs-sound-pack` then `/plugin install hearthstone-sounds@hs-sound-pack`.
 - `npm run format`: format code using Prettier (this one does need `npm install`).
+
+The build only uses Node built-ins, so `npm install` is not required to build.
 
 ### Audio Validation
 
@@ -137,3 +141,72 @@ Codex (OpenAI) uses a different plugin architecture focused on web-based APIs an
 - System audio playback
 
 For this reason, the plugin is designed specifically for Claude Code.
+
+## OpenCode Plugin
+
+The repository includes an OpenCode plugin that provides notifications when OpenCode needs your attention.
+
+### Source Structure
+
+OpenCode plugin source lives under `src/opencode/` and is built to `dist/opencode/`:
+
+```
+src/opencode/
+├── plugins/
+│   └── notification.mjs            # Main notification plugin
+└── commands/
+    └── play-sound.md               # Test command
+```
+
+### Build Process
+
+The build system creates a self-contained OpenCode distribution at `dist/opencode/`:
+
+1. Run `npm run build:opencode` to execute the build script
+2. The build script (`scripts/build.mjs`):
+   - Copies `src/opencode/` → `dist/opencode/plugins/` and `dist/opencode/commands/`
+   - Copies `src/shared/src/` → `dist/opencode/src/shared/`
+   - Copies `soundpack/` → `dist/opencode/soundpack/`
+   - Copies `meta.json` → `dist/opencode/meta.json`
+   - Rewrites import paths to use correct relative paths (`./shared/`)
+3. The resulting `dist/opencode/` directory is self-contained and ready to install
+
+### Install Flow
+
+For OpenCode, copy the built distribution to the plugin directory:
+
+**Project-level (per-project use):**
+
+```bash
+cp -R dist/opencode/.opencode /path/to/your/project/.opencode
+```
+
+**Global (all projects):**
+
+```bash
+cp -R dist/opencode/.opencode ~/.config/opencode/
+cp -R dist/opencode/.opencode/commands ~/.config/opencode/
+```
+
+OpenCode automatically loads plugins from these directories at startup.
+
+### Plugin Architecture (Built Distribution)
+
+- **Location**: `dist/opencode/` directory after build
+- **Plugin file**: `dist/opencode/plugins/notification.mjs`
+- **Command file**: `dist/opencode/commands/play-sound.md`
+- **Events handled**:
+  - `session.idle` — agent finished responding (equivalent to Claude Code's TaskCompleted)
+  - `permission.asked` — agent is requesting permission (equivalent to Claude Code's PermissionRequest)
+  - `session.error` — agent encountered an error
+- **Code reuse**: Uses the same `SoundSelector` and `AudioPlayer` classes from `src/shared/src/` via correct relative paths after build
+- **Test command**: `/play-sound` — plays a random sound to verify the soundpack works
+
+### Sound Selection & Audio Playback
+
+Uses the same `SoundSelector` and `AudioPlayer` classes as the Claude Code plugin:
+
+- Reads `meta.json` to build a flat list of all 125+ audio clips
+- Uses simple random index selection to pick a sound
+- Uses macOS's built-in `afplay` command for audio playback
+- No external dependencies required
