@@ -13,9 +13,12 @@ const LOG_FILE = "/tmp/hs-sounds.log";
 const selector = new SoundSelector(repoRoot);
 
 function logPlayed(soundPath) {
-  const relativePath = path.relative(repoRoot, soundPath);
-  const timestamp = new Date().toISOString();
-  const entry = `${timestamp}  ${relativePath}\n`;
+  const input = JSON.parse(process.env.HOOK_INPUT || "{}");
+  const entry =
+    JSON.stringify({
+      ...input,
+      sound: path.relative(repoRoot, soundPath),
+    }) + "\n";
   fs.appendFileSync(LOG_FILE, entry, "utf8");
 }
 

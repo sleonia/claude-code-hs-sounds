@@ -1,23 +1,12 @@
 {
   "description": "Play sounds when Claude needs user attention",
   "hooks": {
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "node \"$CLAUDE_PLUGIN_ROOT/src/index.mjs\"",
-            "timeout": 5
-          }
-        ]
-      }
-    ],
     "TaskCompleted": [
       {
         "hooks": [
           {
             "type": "command",
-            "command": "node \"$CLAUDE_PLUGIN_ROOT/src/index.mjs\"",
+            "command": "HOOK_INPUT=\"$(cat)\" node \"$CLAUDE_PLUGIN_ROOT/src/index.mjs\"",
             "timeout": 5
           }
         ]
@@ -29,7 +18,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"$CLAUDE_PLUGIN_ROOT/src/index.mjs\"",
+            "command": "HOOK_INPUT=\"$(cat)\" node \"$CLAUDE_PLUGIN_ROOT/src/index.mjs\"",
             "timeout": 5
           }
         ]
@@ -41,7 +30,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"$CLAUDE_PLUGIN_ROOT/src/index.mjs\"",
+            "command": "HOOK_INPUT=\"$(cat)\" node \"$CLAUDE_PLUGIN_ROOT/src/index.mjs\"",
             "timeout": 5
           }
         ]

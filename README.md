@@ -88,24 +88,39 @@ Then reload the plugin inside Claude Code:
 
 ### Troubleshooting bad sounds
 
-Every time a sound is played, its path and timestamp are appended to
-`/tmp/hs-sounds.log`. If a sound is unpleasant, distorted, or just not to your
-taste, you can remove it permanently:
+Every time a sound is played, its path and full hook context are appended as a
+JSON line to `/tmp/hs-sounds.log`. If a sound is unpleasant, distorted, or just
+not to your taste, you can remove it permanently:
 
 1. **Find the offending sound** — open the log and look at the last entry:
 
    ```bash
-   tail -1 /tmp/hs-sounds.log
+   tail -1 /tmp/hs-sounds.log | jq .
    ```
 
    The output looks like:
 
+   ```json
+   {
+     "session_id": "7de06943-8d37-4c70-b53d-af2604c6d860",
+     "transcript_path": "/Users/sleonia/.claude/projects/-private-tmp-.../7de06943.jsonl",
+     "cwd": "/private/tmp/claude-code-hs-sounds",
+     "permission_mode": "default",
+     "hook_event_name": "Stop",
+     "stop_hook_active": false,
+     "last_assistant_message": "Tell me want what you really really want",
+     "sound": "soundpack/Пираты/Капитан Гребешок/VO_AT_109_PLAY_01.wav"
+   }
    ```
-   2026-05-01T12:34:56.789Z  soundpack/Пираты/Капитан Гребешок/VO_AT_109_PLAY_01.wav
+
+   To extract just the sound path:
+
+   ```bash
+   tail -1 /tmp/hs-sounds.log | jq -r '.sound'
    ```
 
 2. **Delete the `.wav` file** from the source repository using the path from
-   the log (relative to the repo root):
+   the log:
 
    ```bash
    rm "soundpack/Пираты/Капитан Гребешок/VO_AT_109_PLAY_01.wav"
