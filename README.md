@@ -43,12 +43,6 @@ claude
 After cloning, the source repo is no longer needed at runtime — the install
 script copies everything the plugin needs into `~/.claude/ai-harness-hs-sounds/`.
 
-### Codex (OpenAI)
-
-Codex does not support local audio playback plugins. The sound files can be
-used manually with your preferred audio player, or consider using Claude Code
-for integrated sound notifications.
-
 ## Uninstall
 
 ```
