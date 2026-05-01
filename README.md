@@ -63,3 +63,71 @@ claude plugin uninstall hearthstone-sounds@hs-sound-pack
 
 Then remove the staged copy: `rm -rf ~/.claude/hs-sound-pack`.
 
+## Development
+
+### Building locally
+
+The build requires no external dependencies — only Node.js built-ins are used.
+
+```bash
+node scripts/build.mjs claude   # or: npm run build:claude
+```
+
+This produces a self-contained distribution at `dist/claude/`. To build **and**
+install in one step:
+
+```bash
+./install.sh
+```
+
+Then reload the plugin inside Claude Code:
+
+```
+/reload-plugins
+```
+
+### Troubleshooting bad sounds
+
+Every time a sound is played, its path and timestamp are appended to
+`/tmp/hs-sounds.log`. If a sound is unpleasant, distorted, or just not to your
+taste, you can remove it permanently:
+
+1. **Find the offending sound** — open the log and look at the last entry:
+
+   ```bash
+   tail -1 /tmp/hs-sounds.log
+   ```
+
+   The output looks like:
+
+   ```
+   2026-05-01T12:34:56.789Z  soundpack/Пираты/Капитан Гребешок/VO_AT_109_PLAY_01.wav
+   ```
+
+2. **Delete the `.wav` file** from the source repository using the path from
+   the log (relative to the repo root):
+
+   ```bash
+   rm "soundpack/Пираты/Капитан Гребешок/VO_AT_109_PLAY_01.wav"
+   ```
+
+3. **Remove its entry from `meta.json`** so it no longer appears in the random
+   pool. Open `meta.json`, find the matching path inside an `audios` array, and
+   delete that string. If it was the only audio for a card, remove the entire
+   card object from the pack array.
+
+4. **Rebuild and reinstall**:
+
+   ```bash
+   ./install.sh
+   ```
+
+   Then reload inside Claude Code:
+
+   ```
+   /reload-plugins
+   ```
+
+> **Note:** `/tmp` is cleared on reboot, so the log starts fresh after each
+> restart. Check the log while your session is still active if you want to
+> identify a sound that was just played.
