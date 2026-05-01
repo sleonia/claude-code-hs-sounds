@@ -9,7 +9,7 @@ allowed-tools:
 
 # Test All Sounds
 
-Test sounds by running the plugin playback commands directly.
+Test sounds by running the plugin playback commands directly. No futher output should be added.
 
 ## Instructions
 
@@ -19,4 +19,3 @@ Use a single Bash tool call for testing the soundpack.
 node ${CLAUDE_PLUGIN_ROOT}/src/index.mjs
 ```
 
-Then ask the user which sounds they heard and whether any were missing or incorrect.
