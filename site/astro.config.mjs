@@ -49,7 +49,7 @@ function soundpackServe() {
 }
 
 export default defineConfig({
-  base: "/claude-code-hs-sounds/",
+  base: "/ai-harness-hs-sounds/",
   vite: {
     plugins: [soundpackServe()],
   },

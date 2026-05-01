@@ -22,8 +22,8 @@ Clone the repository and run the install script. It builds a self-contained
 plugin and stages it under `~/.claude/hs-sound-pack/` as a local marketplace.
 
 ```bash
-git clone https://github.com/sleonia/claude-code-hs-sounds.git
-cd claude-code-hs-sounds
+git clone https://github.com/sleonia/ai-harness-hs-sounds.git
+cd ai-harness-hs-sounds
 ./install.sh
 ```
 
@@ -54,8 +54,8 @@ script copies everything the plugin needs into `~/.claude/hs-sound-pack/`.
 Clone the repository and build the OpenCode plugin:
 
 ```bash
-git clone https://github.com/sleonia/claude-code-hs-sounds.git
-cd claude-code-hs-sounds
+git clone https://github.com/sleonia/ai-harness-hs-sounds.git
+cd ai-harness-hs-sounds
 node scripts/build.mjs opencode
 ```
 
@@ -140,7 +140,7 @@ not to your taste, you can remove it permanently:
    {
      "session_id": "7de06943-8d37-4c70-b53d-af2604c6d860",
      "transcript_path": "/Users/sleonia/.claude/projects/-private-tmp-.../7de06943.jsonl",
-     "cwd": "/private/tmp/claude-code-hs-sounds",
+     "cwd": "/private/tmp/ai-harness-hs-sounds",
      "permission_mode": "default",
      "hook_event_name": "Stop",
      "stop_hook_active": false,
