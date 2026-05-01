@@ -6,8 +6,8 @@
   "author": {
     "name": "sleonia"
   },
-  "homepage": "https://github.com/sleonia/claude-code-hs-sounds",
-  "repository": "https://github.com/sleonia/claude-code-hs-sounds",
+  "homepage": "https://github.com/sleonia/ai-harness-hs-sounds",
+  "repository": "https://github.com/sleonia/ai-harness-hs-sounds",
   "license": "MIT",
   "keywords": ["sounds", "notifications", "audio", "hearthstone"]
 }
