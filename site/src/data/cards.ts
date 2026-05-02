@@ -21,8 +21,8 @@ export const cards: Card[] = Object.entries(meta.packs).flatMap(
       image: entry.imageUrl ?? "",
       source: entry.blizzardUrl ?? "",
       audios: entry.audios.map((audioPath, i) => ({
-        label: i === 0 ? "Play" : `Clip ${i + 1}`,
-        path: "/" + audioPath,
+        label: `аудио ${i + 1}`,
+        path: audioPath,
       })),
     })),
 );
