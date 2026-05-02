@@ -11,14 +11,14 @@ const uniqueSets = Array.from(new Set(cards.map((card) => card.set))).sort();
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hearthstone Sound Pack</title>
+    <title>AI harness HS sounds</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
   <body class="shell">
     <main>
       <Hero cardCount={cards.length} clipCount={totalClips} />
       <GridWrapper>
-        <section class="grid" aria-label="Mapped cards">
+        <section class="grid">
           {cards.map((card) => <CardTile card={card} data-set={card.set} />)}
         </section>
       </GridWrapper>
@@ -30,8 +30,9 @@ const uniqueSets = Array.from(new Set(cards.map((card) => card.set))).sort();
       <div class="footer-divider"></div>
       <div class="footer-content">
         <span>made with by </span>
-        <a href="https://github.com/sleonia/hs-sound-pack" class="repo-link"
-          >sleonia</a
+        <a
+          href="https://github.com/sleonia/ai-harness-hs-sounds"
+          class="repo-link">sleonia</a
         >
       </div>
     </footer>
@@ -42,14 +43,6 @@ const uniqueSets = Array.from(new Set(cards.map((card) => card.set))).sort();
   @font-face {
     font-weight: 400;
     src: url("https://fonts.gstatic.com/s/opensans/v36/mem8YaGs126MiZpBA-UFWJ0bbck.woff2")
-      format("woff2");
-    font-family: "Open Sans";
-    font-display: swap;
-  }
-
-  @font-face {
-    font-weight: 700;
-    src: url("https://fonts.gstatic.com/s/opensans/v36/mem5YaGs126MiZpBA-UN7rgOX-hpOqc.woff2")
       format("woff2");
     font-family: "Open Sans";
     font-display: swap;
