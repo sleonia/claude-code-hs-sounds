@@ -785,20 +785,20 @@
         "title": "Сумеречный предок",
         "blizzardUrl": "https://hearthstone.blizzard.com/ru-ru/cards/38868",
         "imageUrl": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/OG_286.png",
-        "fsPath": "soundpack/[2016.04.27] Пробуждение древних богов/Сумеречный предок",
+        "fsPath": "soundpack/[2016.04.27] Пробуждение древних богов/Сумеречный предок",
         "audios": [
-          "soundpack/[2016.04.27] Пробуждение древних богов/Сумеречный предок/VO_OG_286_Male_Gnome_Attack_01.wav",
-          "soundpack/[2016.04.27] Пробуждение древних богов/Сумеречный предок/VO_OG_286_Male_Gnome_Play_01.wav",
-          "soundpack/[2016.04.27] Пробуждение древних богов/Сумеречный предок/VO_OG_286_Male_Gnome_Trigger_01.wav"
+          "soundpack/[2016.04.27] Пробуждение древних богов/Сумеречный предок/VO_OG_286_Male_Gnome_Attack_01.wav",
+          "soundpack/[2016.04.27] Пробуждение древних богов/Сумеречный предок/VO_OG_286_Male_Gnome_Play_01.wav",
+          "soundpack/[2016.04.27] Пробуждение древних богов/Сумеречный предок/VO_OG_286_Male_Gnome_Trigger_01.wav"
         ]
       },
       {
         "title": "Сумеречный призыватель",
         "blizzardUrl": "https://hearthstone.blizzard.com/ru-ru/cards/38833",
         "imageUrl": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/OG_272.png",
-        "fsPath": "soundpack/[2016.04.27] Пробуждение древних богов/Сумеречный призыватель",
+        "fsPath": "soundpack/[2016.04.27] Пробуждение древних богов/Сумеречный призыватель",
         "audios": [
-          "soundpack/[2016.04.27] Пробуждение древних богов/Сумеречный призыватель/VO_OG_272_Male_Troll_Play_01.wav"
+          "soundpack/[2016.04.27] Пробуждение древних богов/Сумеречный призыватель/VO_OG_272_Male_Troll_Play_01.wav"
         ]
       },
       {
@@ -843,10 +843,10 @@
         "title": "Лакей Медива",
         "blizzardUrl": "https://hearthstone.blizzard.com/ru-ru/cards/39767",
         "imageUrl": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/KAR_092.png",
-        "fsPath": "soundpack/[2016.08.11] Вечеринка в Каражане/Лакей Медива",
+        "fsPath": "soundpack/[2016.08.11] Вечеринка в Каражане/Лакей Медива",
         "audios": [
-          "soundpack/[2016.08.11] Вечеринка в Каражане/Лакей Медива/VO_KAR_092_Male_Human_Attack_01.wav",
-          "soundpack/[2016.08.11] Вечеринка в Каражане/Лакей Медива/VO_KAR_092_Male_Human_Play_07.wav"
+          "soundpack/[2016.08.11] Вечеринка в Каражане/Лакей Медива/VO_KAR_092_Male_Human_Attack_01.wav",
+          "soundpack/[2016.08.11] Вечеринка в Каражане/Лакей Медива/VO_KAR_092_Male_Human_Play_07.wav"
         ]
       },
       {
