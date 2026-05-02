@@ -56,9 +56,9 @@
         "title": "Боевой робот",
         "blizzardUrl": "https://hearthstone.blizzard.com/ru-ru/cards/2019",
         "imageUrl": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/GVG_051.png",
-        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Боевой робот",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Боевой робот",
         "audios": [
-          "soundpack/[2014.12.8] Гоблины и Гномы/Боевой робот/VO_GVG_051_Play_01.wav"
+          "soundpack/[2014.12.8] Гоблины и Гномы/Боевой робот/VO_GVG_051_Play_01.wav"
         ]
       },
       {
@@ -143,9 +143,9 @@
         "title": "Древний исцелятор",
         "blizzardUrl": "https://hearthstone.blizzard.com/ru-ru/cards/2040",
         "imageUrl": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/GVG_072.png",
-        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Древний исцелятор",
+        "fsPath": "soundpack/[2014.12.8] Гоблины и Гномы/Древний исцелятор",
         "audios": [
-          "soundpack/[2014.12.8] Гоблины и Гномы/Древний исцелятор/VO_GVG_072_Attack_02.wav"
+          "soundpack/[2014.12.8] Гоблины и Гномы/Древний исцелятор/VO_GVG_072_Attack_02.wav"
         ]
       },
       {
@@ -284,75 +284,75 @@
         "title": "Боец из Даларана",
         "blizzardUrl": "https://hearthstone.blizzard.com/ru-ru/cards/2549",
         "imageUrl": "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/6c48c7e203082de95a3d37f6fb21c44a2c6d965a135a15111945cfdd9f87868b.png",
-        "fsPath": "soundpack/[2015.08.24] Большой турнир/Боец из Даларана",
+        "fsPath": "soundpack/[2015.08.24] Большой турнир/Боец из Даларана",
         "audios": [
-          "soundpack/[2015.08.24] Большой турнир/Боец из Даларана/VO_AT_006_TRIGGER_04.wav"
+          "soundpack/[2015.08.24] Большой турнир/Боец из Даларана/VO_AT_006_TRIGGER_04.wav"
         ]
       },
       {
         "title": "Серебряный дозорный",
         "blizzardUrl": "https://hearthstone.blizzard.com/ru-ru/cards/2505/",
         "imageUrl": "https://d15f34w2p8l1cc.cloudfront.net/hearthstone/02cb33c2a6e6de6d286d966ee595bd9ae9a9c6de273a2ffb94f2be94c0fb4b10.png",
-        "fsPath": "soundpack/[2015.08.24] Большой турнир/Серебряный дозорный",
+        "fsPath": "soundpack/[2015.08.24] Большой турнир/Серебряный дозорный",
         "audios": [
-          "soundpack/[2015.08.24] Большой турнир/Серебряный дозорный/VO_AT_109_ATTACK_02.wav",
-          "soundpack/[2015.08.24] Большой турнир/Серебряный дозорный/VO_AT_109_PLAY_01.wav"
+          "soundpack/[2015.08.24] Большой турнир/Серебряный дозорный/VO_AT_109_ATTACK_02.wav",
+          "soundpack/[2015.08.24] Большой турнир/Серебряный дозорный/VO_AT_109_PLAY_01.wav"
         ]
       },
       {
         "title": "Великий бретер",
         "blizzardUrl": "https://hearthstone.blizzard.com/ru-ru/cards/2507",
         "imageUrl": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/AT_112.png",
-        "fsPath": "soundpack/[2015.08.24] Большой турнир/Великий бретер",
+        "fsPath": "soundpack/[2015.08.24] Большой турнир/Великий бретер",
         "audios": [
-          "soundpack/[2015.08.24] Большой турнир/Великий бретер/VO_AT_112_PLAY_01.wav"
+          "soundpack/[2015.08.24] Большой турнир/Великий бретер/VO_AT_112_PLAY_01.wav"
         ]
       },
       {
         "title": "Великий рыцарь",
         "blizzardUrl": "https://hearthstone.blizzard.com/ru-ru/cards/2510",
         "imageUrl": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/AT_118.png",
-        "fsPath": "soundpack/[2015.08.24] Большой турнир/Великий рыцарь",
+        "fsPath": "soundpack/[2015.08.24] Большой турнир/Великий рыцарь",
         "audios": [
-          "soundpack/[2015.08.24] Большой турнир/Великий рыцарь/VO_AT_118_ATTACK_02.wav"
+          "soundpack/[2015.08.24] Большой турнир/Великий рыцарь/VO_AT_118_ATTACK_02.wav"
         ]
       },
       {
         "title": "Жонглер пламенем",
         "blizzardUrl": "https://hearthstone.blizzard.com/ru-ru/cards/2580",
         "imageUrl": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/AT_094.png",
-        "fsPath": "soundpack/[2015.08.24] Большой турнир/Жонглер пламенем",
+        "fsPath": "soundpack/[2015.08.24] Большой турнир/Жонглер пламенем",
         "audios": [
-          "soundpack/[2015.08.24] Большой турнир/Жонглер пламенем/VO_AT_094_PLAY_01.wav"
+          "soundpack/[2015.08.24] Большой турнир/Жонглер пламенем/VO_AT_094_PLAY_01.wav"
         ]
       },
       {
         "title": "Загадочный претендент",
         "blizzardUrl": "https://hearthstone.blizzard.com/ru-ru/cards/2726",
         "imageUrl": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/AT_079.png",
-        "fsPath": "soundpack/[2015.08.24] Большой турнир/Загадочный претендент",
+        "fsPath": "soundpack/[2015.08.24] Большой турнир/Загадочный претендент",
         "audios": [
-          "soundpack/[2015.08.24] Большой турнир/Загадочный претендент/VO_AT_079_ATTACK_02.wav",
-          "soundpack/[2015.08.24] Большой турнир/Загадочный претендент/VO_AT_079_PLAY_01.wav"
+          "soundpack/[2015.08.24] Большой турнир/Загадочный претендент/VO_AT_079_ATTACK_02.wav",
+          "soundpack/[2015.08.24] Большой турнир/Загадочный претендент/VO_AT_079_PLAY_01.wav"
         ]
       },
       {
         "title": "Защитник Света",
         "blizzardUrl": "https://hearthstone.blizzard.com/ru-ru/cards/2259",
         "imageUrl": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/AT_106.png",
-        "fsPath": "soundpack/[2015.08.24] Большой турнир/Защитник Света",
+        "fsPath": "soundpack/[2015.08.24] Большой турнир/Защитник Света",
         "audios": [
-          "soundpack/[2015.08.24] Большой турнир/Защитник Света/VO_AT_106_PLAY_01.wav"
+          "soundpack/[2015.08.24] Большой турнир/Защитник Света/VO_AT_106_PLAY_01.wav"
         ]
       },
       {
         "title": "Злобный насмешник",
         "blizzardUrl": "https://hearthstone.blizzard.com/ru-ru/cards/2752",
         "imageUrl": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/AT_114.png",
-        "fsPath": "soundpack/[2015.08.24] Большой турнир/Злобный насмешник",
+        "fsPath": "soundpack/[2015.08.24] Большой турнир/Злобный насмешник",
         "audios": [
-          "soundpack/[2015.08.24] Большой турнир/Злобный насмешник/VO_AT_114_PLAY_01.wav",
-          "soundpack/[2015.08.24] Большой турнир/Злобный насмешник/VO_AT_114_PLAY_ALT1_02.wav"
+          "soundpack/[2015.08.24] Большой турнир/Злобный насмешник/VO_AT_114_PLAY_01.wav",
+          "soundpack/[2015.08.24] Большой турнир/Злобный насмешник/VO_AT_114_PLAY_ALT1_02.wav"
         ]
       },
       {
@@ -596,9 +596,9 @@
         "title": "Радушный трактирщик",
         "blizzardUrl": "https://hearthstone.blizzard.com/ru-ru/cards/40914",
         "imageUrl": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/CFM_654.png",
-        "fsPath": "soundpack/[2016.12.1] Злачный город Прибамбасск/Радушный трактирщик",
+        "fsPath": "soundpack/[2016.12.1] Злачный город Прибамбасск/Радушный трактирщик",
         "audios": [
-          "soundpack/[2016.12.1] Злачный город Прибамбасск/Радушный трактирщик/VO_CFM_654_Male_Tauren_Play_01.wav"
+          "soundpack/[2016.12.1] Злачный город Прибамбасск/Радушный трактирщик/VO_CFM_654_Male_Tauren_Play_01.wav"
         ]
       },
       {
@@ -614,9 +614,9 @@
         "title": "Уличный детектив",
         "blizzardUrl": "https://hearthstone.blizzard.com/ru-ru/cards/40928",
         "imageUrl": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/CFM_656.png",
-        "fsPath": "soundpack/[2016.12.1] Злачный город Прибамбасск/Уличный детектив",
+        "fsPath": "soundpack/[2016.12.1] Злачный город Прибамбасск/Уличный детектив",
         "audios": [
-          "soundpack/[2016.12.1] Злачный город Прибамбасск/Уличный детектив/VO_CFM_656_Male_NightElf_Attack_01.wav"
+          "soundpack/[2016.12.1] Злачный город Прибамбасск/Уличный детектив/VO_CFM_656_Male_NightElf_Attack_01.wav"
         ]
       },
       {
@@ -655,9 +655,9 @@
         "title": "Вороватый дух",
         "blizzardUrl": "https://hearthstone.blizzard.com/ru-ru/cards/45975",
         "imageUrl": "https://art.hearthstonejson.com/v1/render/latest/ruRU/512x/ICC_910.png",
-        "fsPath": "soundpack/[2017.08.11] Рыцари Ледяного Трона/Вороватый дух",
+        "fsPath": "soundpack/[2017.08.11] Рыцари Ледяного Трона/Вороватый дух",
         "audios": [
-          "soundpack/[2017.08.11] Рыцари Ледяного Трона/Вороватый дух/VO_ICC_910_Female_Banshee_Play_03.wav"
+          "soundpack/[2017.08.11] Рыцари Ледяного Трона/Вороватый дух/VO_ICC_910_Female_Banshee_Play_03.wav"
         ]
       },
       {
