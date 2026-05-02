@@ -34,7 +34,7 @@ function playCard(button: HTMLButtonElement) {
 
   resetCurrent();
 
-  const audio = new Audio(clipPath);
+  const audio = new Audio(decodeURI(clipPath));
   currentAudio = audio;
   currentButton = button;
   setButtonState(button, "playing");
