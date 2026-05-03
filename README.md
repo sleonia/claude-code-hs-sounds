@@ -74,6 +74,26 @@ Then reload the plugin inside Claude Code:
 /reload-plugins
 ```
 
+### Site build + troubleshooting (GitHub Pages)
+
+`404` for `/soundpack/...` usually means one of:
+1. `soundpack` was not copied to static output.
+2. `meta.json` paths do not exactly match git-tracked filenames (Unicode byte mismatch).
+
+Run:
+
+```bash
+npm run meta:validate-paths
+npm run meta:sync-paths
+npm run meta:validate-paths
+npm --prefix site run build
+find site/dist -maxdepth 2 -type d -name soundpack -print
+```
+
+Expected:
+- `meta:validate-paths` prints `OK`.
+- `site/dist/soundpack` exists.
+
 ### Troubleshooting bad sounds
 
 Every time a sound is played, its path and full hook context are appended as a
