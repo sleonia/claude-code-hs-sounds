@@ -9,8 +9,8 @@ Tested only on MacOS other platforms are not tested, but PRs are welcome.
 - [Great Hearthstone Sound Pack](https://eu.forums.blizzard.com/ru/hearthstone/t/%D1%84%D0%B0%D0%B9%D0%BB%D1%8B-%D0%B7%D0%B2%D1%83%D0%BA%D0%BE%D0%B2-%D0%BA%D0%B0%D1%80%D1%82-%D0%B8%D0%B7-hearthstone/39)
 - [Hearthstone JSON scripts pack](https://github.com/Zero-to-Heroes/HearthstoneJSON/tree/master)
 - [Oficial site with cards](https://hearthstone.blizzard.com/ru-ru/cards)
-- https://www.reddit.com/r/hearthstone/comments/iaw2sz/hearthsfx_an_uptodate_site_for_nearly_all_of/
-- https://drive.google.com/drive/folders/1jwjkNVFcfyBiWZ8Yx_Bp5FuNWqlUz1W3
+- [All of Hearthstone's card sounds](https://www.reddit.com/r/hearthstone/comments/iaw2sz/hearthsfx_an_uptodate_site_for_nearly_all_of)
+- [Google Drive with the audios](https://drive.google.com/drive/folders/1jwjkNVFcfyBiWZ8Yx_Bp5FuNWqlUz1W3)
 
 I also took inspiration from this repo: https://github.com/newink/claudecode-sounds/tree/main
 
@@ -131,6 +131,6 @@ not to your taste, you can remove it permanently:
    /reload-plugins
    ```
 
-> **Note:** `/tmp` is cleared on reboot, so the log starts fresh after each
-> restart. Check the log while your session is still active if you want to
-> identify a sound that was just played.
+## Disclaimer
+
+All rights to Hearthstone assets, audio, names, and trademarks are reserved by Blizzard Entertainment.
