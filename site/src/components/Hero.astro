@@ -64,6 +64,13 @@ const { cardCount, clipCount } = Astro.props;
     content: "";
   }
 
+
+  @media (max-width: 468px) {
+    .filter-wrapper:after{
+      bottom: -26px;
+    }
+  }
+
   .filter-content {
     display: flex;
     position: relative;
